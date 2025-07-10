@@ -1,0 +1,25 @@
+arb-001/
+├── cmd/                    # 应用程序入口点
+│   └── arbbot/             # 套利机器人主程序
+│       └── main.go         # 主程序入口
+├── internal/               # 内部包，不对外暴露
+│   ├── config/             # 配置相关
+│   │   └── config.go       # 配置结构和加载
+│   ├── jito/               # Jito服务相关
+│   │   └── client.go       # Jito客户端实现
+│   ├── listener/           # 交易监听相关
+│   │   └── listener.go     # 交易监听实现
+│   ├── models/             # 数据模型
+│   │   └── transaction.go  # 交易数据模型
+│   └── trader/             # 交易执行相关
+│       └── trader.go       # 交易执行实现
+├── pkg/                    # 可被外部项目引用的包
+│   ├── solana/             # Solana相关工具
+│   │   └── client.go       # Solana客户端
+│   └── utils/              # 通用工具函数
+│       └── utils.go        # 工具函数实现
+├── .gitignore              # Git忽略文件
+├── go.mod                  # Go模块定义
+├── go.sum                  # Go依赖校验
+├── README.md               # 项目说明文档
+└── Makefile                # 构建和部署脚本
